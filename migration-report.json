@@ -32,6 +32,16 @@
       "file": "smart_schema/core/model_utils.py",
       "line": 233,
       "assumed": "Pydantic 2 ignores validators attached with setattr after create_model; moved validator definition before create_model and passed __validators__={\"handle_nan\": handle_nan} so handle_nan runs at validation time"
+    },
+    {
+      "file": "smart_schema/core/model_utils.py",
+      "line": 387,
+      "assumed": "Updated save_model_to_file emitted validator snippet to field_validator so test_save_and_load_model does not rewrite tests/data/test_model.py back to @validator"
+    },
+    {
+      "file": "pyproject.toml",
+      "line": 16,
+      "assumed": "Added pytest-cov to runtime dependencies so GitHub Actions can honor pyproject addopts --cov=smart_schema without installing uv dev-dependencies"
     }
   ]
 }

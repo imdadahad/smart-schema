@@ -261,7 +261,7 @@ def save_model_to_file(
     model_dependencies = {}
     required_imports = {
         "from typing import Union, Optional, Any, List, Dict",
-        "from pydantic import BaseModel, Field, validator",
+        "from pydantic import BaseModel, Field, field_validator",
         "import math",
     }
 
@@ -384,7 +384,8 @@ def save_model_to_file(
 
     # Add nan validator
     model_code += """
-    @validator('*', pre=True)
+    @field_validator('*', mode='before')
+    @classmethod
     def handle_nan(cls, v: Any) -> Any:
         if isinstance(v, float) and math.isnan(v):
             return None
