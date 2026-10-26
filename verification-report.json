@@ -1,0 +1,60 @@
+{
+  "tests_added": [
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_app_config_parses_valid_payload",
+      "covers": ["examples/generated_integration_models/app_config_model.py:60"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_app_config_rejects_float_nan_on_required_bool",
+      "covers": ["examples/generated_integration_models/app_config_model.py:60"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_product_create_request_optional_description_nan_becomes_none",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_product_create_request_optional_tags_nan_becomes_none",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_product_create_request_rejects_float_nan_on_required_price",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_product_create_request_keeps_finite_float_price",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_sales_record_parses_finite_float_metrics",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_sales_record_rejects_float_nan_on_required_quantity",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    }
+  ],
+  "unreachable": [],
+  "tests": {
+    "ran": 34,
+    "passed": 34,
+    "failed": 0,
+    "skipped": 0,
+    "command": "python -m pytest -q -p no:cacheprovider -o addopts= tests"
+  }
+}
