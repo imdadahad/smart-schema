@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Optional, Type, Union, get_args, get_origin,
 
 import numpy as np
 import pandas as pd
-from pydantic import BaseModel, Field, ValidationError, create_model, validator
+from pydantic import BaseModel, Field, ValidationError, create_model, field_validator
 
 from ..utils.dataframe_utils import (
     align_dataframe_with_model,
@@ -222,22 +222,21 @@ def generate_pydantic_model(
         else:
             model_fields[field_name] = (field_type, default)
 
-    # Create the base model
-    model = create_model(
-        model_name,
-        **model_fields,
-        __doc__=description or f"Model with fields: {', '.join(fields.keys())}",
-    )
-
     # Add nan validator
-    @validator("*", pre=True)
+    @field_validator("*", mode="before")
+    @classmethod
     def handle_nan(cls, v: Any) -> Any:
         if isinstance(v, float) and math.isnan(v):
             return None
         return v
 
-    # Add the validator to the model
-    setattr(model, "handle_nan", classmethod(handle_nan))
+    # Create the base model
+    model = create_model(
+        model_name,
+        **model_fields,
+        __doc__=description or f"Model with fields: {', '.join(fields.keys())}",
+        __validators__={"handle_nan": handle_nan},
+    )
 
     return model
 
