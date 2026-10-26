@@ -1,0 +1,52 @@
+{
+  "tests_added": [
+    {
+      "file": "tests/test_generated_integration_models_nan.py",
+      "test": "test_app_config_accepts_valid_integration_json",
+      "covers": ["examples/generated_integration_models/app_config_model.py:60"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_nan.py",
+      "test": "test_app_config_rejects_nan_bool_field",
+      "covers": ["examples/generated_integration_models/app_config_model.py:60"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_nan.py",
+      "test": "test_product_create_request_accepts_valid_integration_json",
+      "covers": ["examples/generated_integration_models/product_create_request_model.py:35"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_nan.py",
+      "test": "test_product_create_request_maps_nan_optional_description_to_none",
+      "covers": ["examples/generated_integration_models/product_create_request_model.py:35"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_nan.py",
+      "test": "test_product_create_request_rejects_nan_required_price",
+      "covers": ["examples/generated_integration_models/product_create_request_model.py:35"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_nan.py",
+      "test": "test_sales_record_accepts_valid_csv_row",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_nan.py",
+      "test": "test_sales_record_rejects_nan_quantity_sold",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_nan.py",
+      "test": "test_sales_record_preserves_non_nan_float_quantity",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    }
+  ],
+  "unreachable": [],
+  "tests": {
+    "ran": 34,
+    "passed": 34,
+    "failed": 0,
+    "skipped": 0,
+    "command": "python -m pytest -q -p no:cacheprovider -o addopts= tests"
+  }
+}
