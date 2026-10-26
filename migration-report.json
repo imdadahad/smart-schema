@@ -42,6 +42,11 @@
       "file": "smart_schema/core/model_utils.py",
       "line": 387,
       "assumed": "save_model_to_file was not in the static index but must emit field_validator so post-test verification of indexed tests/data/test_model.py still passes after test_save_and_load_model runs."
+    },
+    {
+      "file": "pyproject.toml",
+      "line": 79,
+      "assumed": "Removed --cov=smart_schema from pytest addopts so fleetmigrate CI (coverage run wrapper, no pytest-cov) can collect and run tests."
     }
   ]
 }
