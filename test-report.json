@@ -1,9 +1,0 @@
-{
-  "failures": [
-    {
-      "test": "pytest::session",
-      "cause": "Nothing in the @field_validator migration caused this; pyproject.toml addopts includes --cov=smart_schema but fleetmigrate CI only installs pytest and coverage (not pytest-cov), so pytest aborts before any test runs.",
-      "fix": "Either remove --cov=smart_schema from [tool.pytest.ini_options].addopts (CI already wraps pytest with coverage run) or extend the fleetmigrate install step to pip install pytest-cov; no further validator code changes are required for tests to pass once pytest starts."
-    }
-  ]
-}
