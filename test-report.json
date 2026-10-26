@@ -1,0 +1,9 @@
+{
+  "failures": [
+    {
+      "test": "(session)::pytest_startup",
+      "cause": "Nothing in the validator migration caused this; pytest exits during startup because CI lacks the pytest-cov plugin while pyproject.toml addopts includes --cov=smart_schema.",
+      "fix": "Update GitHub Actions to install dev dependencies (including pytest-cov from [tool.uv] dev-dependencies, e.g. via uv sync) before running pytest; no change to the field_validator edits is required for this error."
+    }
+  ]
+}
