@@ -1,0 +1,47 @@
+{
+  "tests_added": [
+    {
+      "file": "tests/test_nan_preprocessing.py",
+      "test": "test_app_config_converts_float_nan_to_none_before_bool_coercion",
+      "covers": ["examples/generated_integration_models/app_config_model.py:60"]
+    },
+    {
+      "file": "tests/test_nan_preprocessing.py",
+      "test": "test_product_create_request_accepts_nan_on_optional_description",
+      "covers": ["examples/generated_integration_models/product_create_request_model.py:35"]
+    },
+    {
+      "file": "tests/test_nan_preprocessing.py",
+      "test": "test_sales_record_rejects_nan_on_required_float_field",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    },
+    {
+      "file": "tests/test_nan_preprocessing.py",
+      "test": "test_generate_pydantic_model_handle_nan_converts_float_nan",
+      "covers": ["smart_schema/core/model_utils.py:233"]
+    },
+    {
+      "file": "tests/test_nan_preprocessing.py",
+      "test": "test_generate_pydantic_model_keeps_float_nan_on_nullable_field_instance",
+      "covers": ["smart_schema/core/model_utils.py:233"]
+    },
+    {
+      "file": "tests/test_nan_preprocessing.py",
+      "test": "test_test_data_model_converts_nan_on_optional_string_field",
+      "covers": ["tests/data/test_model.py:16"]
+    },
+    {
+      "file": "tests/test_nan_preprocessing.py",
+      "test": "test_test_data_model_rejects_nan_on_required_int_field",
+      "covers": ["tests/data/test_model.py:16"]
+    }
+  ],
+  "unreachable": [],
+  "tests": {
+    "ran": 33,
+    "passed": 33,
+    "failed": 0,
+    "skipped": 0,
+    "command": "python -m pytest -q -p no:cacheprovider tests"
+  }
+}
