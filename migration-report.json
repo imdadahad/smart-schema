@@ -1,0 +1,37 @@
+{
+  "changed": [
+    {
+      "file": "examples/generated_integration_models/app_config_model.py",
+      "line": 60,
+      "note": "@validator(\"*\", pre=True) -> @field_validator(\"*\", mode=\"before\") with @classmethod; import updated"
+    },
+    {
+      "file": "examples/generated_integration_models/product_create_request_model.py",
+      "line": 35,
+      "note": "@validator(\"*\", pre=True) -> @field_validator(\"*\", mode=\"before\") with @classmethod; import updated"
+    },
+    {
+      "file": "examples/generated_integration_models/sales_record_model.py",
+      "line": 23,
+      "note": "@validator(\"*\", pre=True) -> @field_validator(\"*\", mode=\"before\") with @classmethod; import updated"
+    },
+    {
+      "file": "smart_schema/core/model_utils.py",
+      "line": 233,
+      "note": "Replaced post-create setattr validator with create_model __validators__ and field_validator(\"*\", mode=\"before\")"
+    },
+    {
+      "file": "tests/data/test_model.py",
+      "line": 16,
+      "note": "@validator(\"*\", pre=True) -> @field_validator(\"*\", mode=\"before\") with @classmethod; import updated"
+    }
+  ],
+  "skipped": [],
+  "guesses": [
+    {
+      "file": "smart_schema/core/model_utils.py",
+      "line": 233,
+      "assumed": "handle_nan registered via __validators__={\"handle_nan\": field_validator(\"*\", mode=\"before\")(handle_nan)} is the Pydantic 2 equivalent of setattr after create_model; validator key name must not match a field name"
+    }
+  ]
+}
