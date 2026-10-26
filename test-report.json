@@ -1,0 +1,9 @@
+{
+  "failures": [
+    {
+      "test": "(pytest session)::startup",
+      "cause": "Nothing in the @validator-to-@field_validator diff caused this; pytest exits immediately because pyproject.toml addopts include --cov=smart_schema while GitHub Actions installs only runtime dependencies and not [tool.uv] dev-dependencies where pytest-cov is declared.",
+      "fix": "No change to the field_validator migration is required for this error; update CI to install dev dependencies (or add pytest-cov to what the workflow installs) so pytest accepts --cov."
+    }
+  ]
+}
