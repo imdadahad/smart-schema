@@ -6,7 +6,7 @@ import math
 from builtins import bool, float, int, str
 from typing import Any, Dict, List, Optional, Union
 
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, field_validator
 
 
 class Specifications(BaseModel):
@@ -32,7 +32,8 @@ class ProductCreateRequest(BaseModel):
     is_active: bool
     tags: Optional[List]
 
-    @validator("*", pre=True)
+    @field_validator("*", mode="before")
+    @classmethod
     def handle_nan(cls, v: Any) -> Any:
         if isinstance(v, float) and math.isnan(v):
             return None
