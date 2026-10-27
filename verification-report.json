@@ -1,0 +1,65 @@
+{
+  "tests_added": [
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_app_config_accepts_valid_integration_payload",
+      "covers": ["examples/generated_integration_models/app_config_model.py:60"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_app_config_nan_top_level_field_is_treated_as_missing",
+      "covers": ["examples/generated_integration_models/app_config_model.py:60"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_product_create_request_accepts_valid_integration_payload",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_product_create_request_nan_optional_description_becomes_none",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_product_create_request_nan_optional_tags_becomes_none",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_product_create_request_nan_required_price_rejected",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_sales_record_accepts_finite_float_metrics",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_sales_record_nan_quantity_sold_rejected",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    },
+    {
+      "file": "tests/test_generated_integration_models_handle_nan.py",
+      "test": "test_sales_record_non_float_input_unchanged_for_strings",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    }
+  ],
+  "unreachable": [],
+  "tests": {
+    "ran": 35,
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "command": "python -m pytest -q -p no:cacheprovider -o addopts= tests"
+  }
+}
