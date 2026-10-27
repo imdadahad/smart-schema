@@ -1,0 +1,37 @@
+{
+  "changed": [
+    {
+      "file": "examples/generated_integration_models/app_config_model.py",
+      "line": 60,
+      "note": "Replaced @validator(\"*\", pre=True) with @field_validator(\"*\", mode=\"before\") and @classmethod; updated import."
+    },
+    {
+      "file": "examples/generated_integration_models/product_create_request_model.py",
+      "line": 35,
+      "note": "Replaced @validator(\"*\", pre=True) with @field_validator(\"*\", mode=\"before\") and @classmethod; updated import."
+    },
+    {
+      "file": "examples/generated_integration_models/sales_record_model.py",
+      "line": 23,
+      "note": "Replaced @validator(\"*\", pre=True) with @field_validator(\"*\", mode=\"before\") and @classmethod; updated import."
+    },
+    {
+      "file": "smart_schema/core/model_utils.py",
+      "line": 233,
+      "note": "Replaced @validator with @field_validator; attached handle_nan via create_model __validators__ instead of setattr after model creation."
+    },
+    {
+      "file": "tests/data/test_model.py",
+      "line": 16,
+      "note": "Replaced @validator(\"*\", pre=True) with @field_validator(\"*\", mode=\"before\") and @classmethod; updated import."
+    }
+  ],
+  "skipped": [],
+  "guesses": [
+    {
+      "file": "smart_schema/core/model_utils.py",
+      "line": 233,
+      "assumed": "Post-creation setattr(model, \"handle_nan\", classmethod(...)) does not register validators on Pydantic 2; moved definition before create_model and passed __validators__={\"handle_nan\": handle_nan} as recommended."
+    }
+  ]
+}
