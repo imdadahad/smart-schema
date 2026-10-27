@@ -1,0 +1,53 @@
+{
+  "tests_added": [
+    {
+      "file": "tests/test_generated_integration_nan_handling.py",
+      "test": "test_app_config_parses_valid_integration_fixture",
+      "covers": ["examples/generated_integration_models/app_config_model.py:60"]
+    },
+    {
+      "file": "tests/test_generated_integration_nan_handling.py",
+      "test": "test_app_config_float_nan_at_top_level_raises",
+      "covers": ["examples/generated_integration_models/app_config_model.py:60"]
+    },
+    {
+      "file": "tests/test_generated_integration_nan_handling.py",
+      "test": "test_product_create_request_parses_valid_integration_fixture",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_nan_handling.py",
+      "test": "test_product_create_request_nan_optional_description_becomes_none",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_nan_handling.py",
+      "test": "test_product_create_request_nan_required_price_raises",
+      "covers": [
+        "examples/generated_integration_models/product_create_request_model.py:35"
+      ]
+    },
+    {
+      "file": "tests/test_generated_integration_nan_handling.py",
+      "test": "test_sales_record_accepts_finite_float_fields",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    },
+    {
+      "file": "tests/test_generated_integration_nan_handling.py",
+      "test": "test_sales_record_nan_float_field_raises",
+      "covers": ["examples/generated_integration_models/sales_record_model.py:23"]
+    }
+  ],
+  "unreachable": [],
+  "tests": {
+    "ran": 33,
+    "passed": 33,
+    "failed": 0,
+    "skipped": 0,
+    "command": "python -m pytest -q -p no:cacheprovider -o addopts= tests"
+  }
+}
